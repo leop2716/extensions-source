@@ -130,14 +130,14 @@ jobs:
           java -jar ./Inspector.jar "repo/apk" "output.json" "tmp"
           python ./.github/scripts/create-repo.py
 
-      - name: Checkout repo branch
+            - name: Checkout repo branch
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          repository: keiyoushi/extensions
-          token: ${{ secrets.BOT_PAT }}
+          repository: leop2716/extensions-source
           ref: repo
           path: repo
           persist-credentials: true
+
 
       - name: Merge and deploy repo
         env:
